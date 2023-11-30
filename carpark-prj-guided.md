@@ -199,12 +199,7 @@ You realize that you need a way to configure the car park system. You decide to 
 --------
 **Evidencing:**
 Ensure that you have completed the previous steps and created the appropriate tags. Confirm that the tags have been created by running `git tag` in the terminal and provide a screenshot of the output.
-
-```bash
-[student@workstation ipriot-car-park-prj]$ git tag
-s1
-s2
-```
+![img_2.png](img_2.png)
 
 ### Relate the classes
 
@@ -328,12 +323,7 @@ Now we can add the code to add the `component` to the appropriate. Add the follo
 
 **Evidencing:**
 After you have implemented the required code, commit your changes to the local repository and add a tag so your lecturer can find it:
-
-   ```bash
-   git add .
-   git commit -m "Added a register method to the car park class"
-   git tag -a "s3" -m "Added a register method to the car park class"
-   ```
+![img_3.png](img_3.png)
 
 #### Add and remove car methods
 
@@ -417,12 +407,7 @@ The `update_displays` method shall send status information: available bays, temp
 
 **Evidencing:**
 After you have implemented the required code, commit your changes to the local repository and add a tag so your lecturer can find it:
-
-   ```bash
-   git add .
-   git commit -m "Added methods to the car park class"
-   git tag -a "s4" -m "Added methods to the car park class"
-   ```
+![img_4.png](img_4.png)
 
 This time, we will push the tag to the remote repository:
 
@@ -431,27 +416,24 @@ This time, we will push the tag to the remote repository:
    ```
 
 Add a screenshot of the GitHub repository after pushing the tag, showing the CarPark class with the new methods:
-
-```markdown
-![Added methods to the car park class](images/methods-to-car-park.png)
-```
+![img_5.png](img_5.png)
 
 Answer the following questions:
 > **Review Questions**
 >
 > 1. **Which class is responsible for each of the following pieces of information (and why)?**
 >    - *The number of available bays*  
->      `Answer here...`
+>      `Car Park`
 >    - *The current temperature*  
->      `Answer here...`
+>      `Display`
 >    - *The time*  
->      `Answer here...`
+>      `Display`
 >
 > 2. **What is the difference between an attribute and a property?**  
->    `Answer here...`
+>    `The main difference is that a property is actually a method but is accessed like an attribute`
 >
 > 3. **Why do you think we used a dictionary to hold the data we passed the display? List at least one advantage and one disadvantage of this approach.**  
->    `Answer here...`
+>    `Dictionaries can have multiple keys and values while counting as only one argument`
 
 
 #### Add a detect vehicle method to the Sensor class
