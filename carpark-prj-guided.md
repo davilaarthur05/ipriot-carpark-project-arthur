@@ -531,18 +531,7 @@ def _scan_plate(self):
 
 **Evidencing:**
 After you have implemented the required code, commit your changes to the local repository and add a tag so your lecturer can find it:
-
-   ```bash
-   git add .
-   git commit -m "Created core methods for the classes"
-   git tag -a "s5" -m "Core methods completed"
-   ```
-
-Probably a good idea to commit to GitHub now:
-
-   ```bash
-   git push --tags
-   ```
+![img_6.png](img_6.png)
 
 ### Taking stock
 

@@ -10,7 +10,7 @@ class CarPark:
 
     @property
     def available_bays(self):
-        return self.capacity - len(self.plates)
+        return max(0, self.capacity - len(self.plates))
 
     def __str__(self):
         return f"Welcome to {self.location} Car Park!!"
