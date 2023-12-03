@@ -49,17 +49,15 @@ class CarPark:
         for display in self.displays:
             display.update({"Bays": self.available_bays, "Temperature": 42})
 
-    def to_json(self, file_name):
-        with open(file_name, "w") as file:
+    def write_config(self):
+        with open("config.json", "w") as file:
             json.dump({"location": self.location,
                        "capacity": self.capacity,
                        "log_file": str(self.log_file)}, file)
 
     @staticmethod
-    def from_json(file_name):
-        # carpark = CarPark.from_json('some_text.txt')
-        with open(file_name, "r") as file:
-            conf = json.load(file)
-        return CarPark(location=conf["location"],
-                       capacity=int(conf["capacity"]),
-                       log_file=conf["log_file"])
+    def from_config(config_file=Path("config.json")):
+        config_file = config_file if isinstance(config_file, Path) else Path(config_file)
+        with config_file.open() as f:
+            config = json.load(f)
+        return CarPark(config["location"], config["capacity"], log_file=config["log_file"])

@@ -2,7 +2,7 @@ from car_park import CarPark
 from sensor import EntrySensor, ExitSensor
 from display import Display
 
-car_park = CarPark.from_json('moondalup.txt')
+car_park = CarPark.from_config('moondalup.txt')
 entry_sensor = EntrySensor(1, car_park, is_active=True)
 exit_sensor = ExitSensor(2, car_park, is_active=True)
 display = Display(1, car_park, message="Welcome to Moondalup", is_on=True)
