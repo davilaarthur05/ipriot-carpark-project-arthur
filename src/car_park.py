@@ -33,7 +33,7 @@ class CarPark:
 
     def _log_car(self, action, plate):
         with self.log_file.open(mode="a") as file:
-            file.write(f"{plate} {action} on the {datetime.now().strftime('%d-%m %H:%M')}")
+            file.write(f"{plate} {action} on the {datetime.now().strftime('%d-%m %H:%M')}\n")
 
     def add_car(self, plate):
         self.plates.append(plate)
@@ -41,11 +41,11 @@ class CarPark:
 
     def remove_car(self, plate):
         self.plates.remove(plate)
+        self._log_car("exited", plate)
 
     def update_displays(self):
         for display in self.displays:
             display.update({"Bays": self.available_bays, "Temperature": 42})
-            print(f"Updating {display}")
 
     def to_json(self, file_name):
         with open(file_name, "w") as file:
